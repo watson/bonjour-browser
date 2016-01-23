@@ -21,7 +21,7 @@ npm install bonjour-browser -g
 ## Usage
 
 ```
-bonjour [Service Name] [Subtype]
+bonjour [Service Name]
 ```
 
 Run the `bonjour` command without any arguments to get a list of
