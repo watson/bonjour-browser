@@ -1,6 +1,6 @@
 {
   "name": "bonjour-browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line tool to browse for Bonjour/Zeroconf enabled services on your local network",
   "bin": {
     "bonjour": "index.js"
@@ -40,7 +40,7 @@
   "homepage": "https://github.com/watson/bonjour-browser#readme",
   "preferGlobal": true,
   "coordinates": [
-    55.6666363,
-    12.5798123
+    55.6666981,
+    12.5798091
   ]
 }
