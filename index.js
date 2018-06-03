@@ -9,5 +9,5 @@ var found = {}
 bonjour.find({ type: name }, function (service) {
   if (service.fqdn in found) return
   found[service.fqdn] = true
-  console.log(service.fqdn)
+  console.log({fqdn:service.fqdn, addresses:service.addresses});
 })
