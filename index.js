@@ -4,7 +4,7 @@
 var bonjour = require('bonjour')()
 
 var name = process.argv[2]
-var found = {}
+var found = Object.create(null)
 
 bonjour.find({ type: name }, function (service) {
   if (service.fqdn in found) return
