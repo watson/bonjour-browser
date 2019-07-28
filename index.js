@@ -4,13 +4,13 @@
 var mri = require('mri')
 
 var argv = mri(process.argv.slice(2), {
-  boolean: ['help', 'h']
+  boolean: ['help', 'h', 'print-details']
 })
 
 if (argv.help || argv.h) {
-  process.stdout.write(`\
+  console.log(`\
 Usage:
-  bonjour-browser [name]
+  bonjour-browser [--print-details] [name]
 Example:
   bonjour-browser my-apple-tv
 `)
@@ -20,10 +20,11 @@ Example:
 var bonjour = require('bonjour')()
 
 var name = argv._[2]
-var found = Object.create(null)
+var printDetails = !!argv['print-details']
 
+var found = Object.create(null)
 bonjour.find({ type: name }, function (service) {
   if (service.fqdn in found) return
   found[service.fqdn] = true
-  console.log(service.fqdn)
+  console.log(printDetails ? service : service.fqdn)
 })
