@@ -6,7 +6,8 @@
     "bonjour": "index.js"
   },
   "dependencies": {
-    "bonjour": "^3.2.0"
+    "bonjour": "^3.2.0",
+    "mri": "^1.1.4"
   },
   "devDependencies": {
     "standard": "^5.4.1"
